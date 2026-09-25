@@ -1,3 +1,4 @@
+"use script";
 // Husk fra dag 1: skriv "use strict" herunder
 
 
@@ -13,9 +14,13 @@ getWordElem.addEventListener("click", function() {
     // Nyt i dag: this.innerHTML kan indsætte HTML-kode (fx <strong>...</strong>),
     // hvor this.textContent kun kan indsætte ren tekst.
     //
+    if (this.textContent === `Det ta'r kun 5 minutter`) {
+        this.innerHTML = `<strong>og så er du i Netto.</strong>`;
+    } else {
+        this.innerHTML = `Det ta'r kun 5 minutter`;
+    }
     // Hvis this.textContent er "Det ta'r kun 5 minutter", så:
     //   - sæt this.innerHTML til "<strong>og så er du i Netto.</strong>"
     // Ellers:
     //   - sæt this.innerHTML til "Det ta'r kun 5 minutter"
-
 });
